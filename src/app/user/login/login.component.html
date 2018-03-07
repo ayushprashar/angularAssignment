@@ -1,0 +1,12 @@
+<div>
+  <form #loginForm="ngForm" (submit)="submitUser()">
+    <input #email = "ngModel" name = "email" type="email"  [(ngModel)] = emailId required>
+    <br>
+    <div [hidden]="email.valid || email.pristine" >  The email is not valid</div>
+    <input #pass = "ngModel" name="password" minlength="5" type ="password" [(ngModel)] = passwordId required>
+    <br>
+    <div [hidden]="pass.valid || pass.pristine">Password invalid</div>
+    <button type="submit" [disabled]="loginForm.invalid">SUBMIT</button>
+  </form>
+</div>
+

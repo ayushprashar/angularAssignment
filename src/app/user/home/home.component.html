@@ -1,0 +1,7 @@
+<div>
+  <ul *ngFor="let d of data">
+    <li>
+        <app-display-data [title] = 'd.snippet.title' [thumbnail] = 'd.snippet.thumbnails' [id] = 'd.id.videoId'></app-display-data>
+    </li>
+  </ul>
+</div>
